@@ -20,7 +20,7 @@
         insert ignore into success_killed(seckill_id, user_phone, state)
         values (#{seckillId}, #{userPhone}, 0)
     </insert>
-    <select id="queryByIdWithSeckill" resultType="successKilledMap" parameterType="long">
+    <select id="queryByIdWithSeckill" resultMap="successKilledMap" parameterType="long">
         select sk.seckill_id,
                sk.user_phone,
                sk.create_time,

@@ -2,6 +2,7 @@ package com.seckill.dao;
 
 import com.seckill.pojo.Seckill;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
  * @date 2020年 02月10日 22:40:25
  */
 @Mapper
+@Component
 public interface SeckillDao {
 
 	/**
