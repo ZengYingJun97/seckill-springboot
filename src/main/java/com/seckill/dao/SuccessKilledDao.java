@@ -1,7 +1,9 @@
 package com.seckill.dao;
 
 import com.seckill.pojo.SuccessKilled;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 /**
  * SuccessKilledDao
@@ -9,6 +11,8 @@ import org.apache.ibatis.annotations.Param;
  * @author handsome
  * @date 2020年 02月10日 22:45:14
  */
+@Mapper
+@Component
 public interface SuccessKilledDao {
 
 	/**

@@ -2,8 +2,7 @@ package com.seckill.dao;
 
 import com.seckill.pojo.Seckill;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 import java.util.List;
@@ -14,9 +13,8 @@ import java.util.List;
  * @author handsome
  * @date 2020年 02月10日 22:40:25
  */
-
-@Repository
 @Mapper
+@Component
 public interface SeckillDao {
 
 	/**
@@ -26,8 +24,8 @@ public interface SeckillDao {
 	 * @param seckillId
 	 * @param killTime
 	 * @return int
-	 */        
-	int reduceNumber(@Param("seckillId") long seckillId, @Param("killTime") Date killTime);
+	 */
+	int reduceNumber(long seckillId, Date killTime);
 
 	/**
 	 * 通过id查询秒杀商品
@@ -36,7 +34,7 @@ public interface SeckillDao {
 	 * @param seckillId
 	 * @return com.seckill.pojo.Seckill
 	 */        
-	Seckill queryById(@Param("seckillId") long seckillId);
+	Seckill queryById(long seckillId);
 
 	/**
 	 * 通过偏移量查询秒杀商品列表
@@ -45,5 +43,5 @@ public interface SeckillDao {
 	 * @param 
 	 * @return java.util.List<com.seckill.pojo.Seckill>
 	 */        
-	List<Seckill> queryAll(@Param("offset") int offset, @Param("limit") int limit);
+	List<Seckill> queryAll(int offset, int limit);
 }
